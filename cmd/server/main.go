@@ -12,9 +12,7 @@ func main() {
 	api := app.Group("/api")
 
 	app.Get("/", func(c *fiber.Ctx) error {
-		return c.Status(fiber.StatusOK).JSON(fiber.Map{
-			"msg": "welcome",
-		})
+		return c.Status(fiber.StatusOK).JSON("Welcome")
 	})
 	routes.TodoRoutes(api.Group("/todo"))
 
