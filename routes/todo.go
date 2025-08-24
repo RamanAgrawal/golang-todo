@@ -9,4 +9,5 @@ import (
 func TodoRoutes(route fiber.Router) {
 	route.Get("/", controllers.GetTodos)
 	route.Post("/", controllers.CreateTodo)
+	route.Delete("/", controllers.DeleteTodo)
 }
